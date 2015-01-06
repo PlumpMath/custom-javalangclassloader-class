@@ -1920,8 +1920,8 @@ public abstract class ClassLoader {
             synchronized (loadedLibraryNames) {
                 if (loadedLibraryNames.contains(name)) {
                     // Pmauduit modifications
-                    // silently discard
-                    System.out.println(name + "already loaded in another classloader.");
+                    // silently discards, instead of throwing an exception
+                    System.out.println(name + " already loaded in another classloader.");
                     System.out.println("Who cares anyway ? ;-)");
                     return true;
                 }
